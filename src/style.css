@@ -1,1 +1,24 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.card {
+  width: 200px;
+  height: 200px;
+  background: aqua;
+}
+
+.pinta1 {
+  width: 30px;
+  height: 30px;
+  background: red;
+}
+
+.numero {
+  width: 30px;
+  height: 30px;
+  background: red;
+}
+.pinta2 {
+  width: 30px;
+  height: 30px;
+  background: red;
+}
