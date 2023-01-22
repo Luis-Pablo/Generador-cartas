@@ -7,7 +7,7 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  random();
+  random(pinta(), numero());
 };
 const numeros = [
   "1",
@@ -38,13 +38,13 @@ let pinta1 = document.querySelector(".pinta1");
 let pinta2 = document.querySelector(".pinta2");
 let numeroDiv = document.querySelector(".numero1");
 
-let random = () => {
-  pinta1.innerHTML = pinta();
-  pinta2.innerHTML = pinta();
-  numeroDiv.innerHTML = numero();
+let random = (pin, num) => {
+  pinta1.innerHTML = pin;
+  pinta2.innerHTML = pin;
+  numeroDiv.innerHTML = num;
 };
-setInterval(random, 5000);
+setInterval(random(pinta(), numero()), 5000);
 const boton = document.querySelector(".boton");
 boton.addEventListener("click", () => {
-  random();
+  random(pinta(), numero());
 });
