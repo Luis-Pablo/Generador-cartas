@@ -4,11 +4,11 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-/*
+
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
-};*/
+  random();
+};
 const numeros = [
   "1",
   "2",
@@ -24,12 +24,14 @@ const numeros = [
   "Q",
   "K"
 ];
-const pintas = ["♦", "♥", "♠", "♣"];
+const pintas = ["\u2666", "\u2665", "\u2660", "\u2663"]; //["♦", "♥", "♠", "♣"];
 let numero = () => {
-  return Math.floor(Math.random() * numeros.length);
+  let random = Math.floor(Math.random() * numeros.length);
+  return numeros[random];
 };
 let pinta = () => {
-  return Math.floor(Math.random() * pintas.length);
+  let random = Math.floor(Math.random() * pintas.length);
+  return pintas[random];
 };
 //let imprimirPinta = pinta();
 let pinta1 = document.querySelector(".pinta1");
@@ -41,7 +43,7 @@ let random = () => {
   pinta2.innerHTML = pinta();
   numeroDiv.innerHTML = numero();
 };
-setInterval(random(), 2000);
+setInterval(random, 5000);
 const boton = document.querySelector(".boton");
 boton.addEventListener("click", () => {
   random();
