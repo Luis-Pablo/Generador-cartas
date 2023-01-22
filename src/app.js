@@ -24,7 +24,7 @@ const numeros = [
   "Q",
   "K"
 ];
-const pintas = ["\u2666", "\u2665", "\u2660", "\u2663"]; //["♦", "♥", "♠", "♣"];
+const pintas = ["♦", "♥", "♠", "♣"];
 let numero = () => {
   let random = Math.floor(Math.random() * numeros.length);
   return numeros[random];
@@ -33,7 +33,7 @@ let pinta = () => {
   let random = Math.floor(Math.random() * pintas.length);
   return pintas[random];
 };
-//let imprimirPinta = pinta();
+
 let pinta1 = document.querySelector(".pinta1");
 let pinta2 = document.querySelector(".pinta2");
 let numeroDiv = document.querySelector(".numero1");
